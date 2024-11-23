@@ -39,8 +39,8 @@ const SearchWithDropdown = () => {
 						setDropdownOpen(e.target.value !== ""); // Open dropdown if input is not empty
 						setShowCategories(false); // Hide categories when typing
 					}}
-					placeholder='Search...'
-					className='w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md'
+					placeholder='items, collections and creators'
+					className='w-full p-5 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md '
 				/>
 				<button
 					onClick={toggleDropdown}
@@ -66,7 +66,7 @@ const SearchWithDropdown = () => {
 								>
 									{category}
 								</div>
-						  ))
+))
 						: filteredSuggestions.map((item, index) => (
 								<div
 									key={index}
@@ -78,7 +78,7 @@ const SearchWithDropdown = () => {
 								>
 									{item}
 								</div>
-						  ))}
+						))}
 				</div>
 			)}
 		</div>

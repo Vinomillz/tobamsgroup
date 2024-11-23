@@ -1,54 +1,71 @@
+import { Link } from "react-router-dom";
 import Card from "./Cards";
 import { CardData } from "./types";
 import ITEM1 from "../assets/ITEM1.png";
 import image2 from "../assets/image2.png";
 import image3 from "../assets/Image3.png";
-import image0 from "../assets/Image0.png"
+import image0 from "../assets/Image0.png";
+import image4 from "../assets/Image4.png";
+import image5 from "../assets/image5.png";
 import { useState } from "react";
+import BiddingPeoples from "../assets/BiddingPeople.png";
 
 const LatestAuction = () => {
+	// Add a unique "id" to each auction item
 	const cardData: CardData[] = [
 		{
+			id: 1,
 			image: image0,
-			Name: "lorem20",
+			Name: "Tristique diam a, enim, . Viverra etiam",
 			timeLeft: "12:30:00",
-			price: 100,
+			price: 2.55,
 			likes: 120,
+			BiddingPeople: BiddingPeoples,
 		},
 		{
+			id: 2,
 			image: ITEM1,
-			Name: "lorem20",
+			Name: "Vulputate felis purus viverra morbi ",
 			timeLeft: "08:15:00",
-			price: 250,
+			price: 3.19,
 			likes: 75,
+			BiddingPeople: BiddingPeoples,
 		},
 		{
+			id: 3,
 			image: image2,
-			Name: "lorem20",
+			Name: "Dui accumsan leo vestibulum ornare",
 			timeLeft: "04:45:00",
-			price: 150,
+			price: 1.11,
 			likes: 300,
+			BiddingPeople: BiddingPeoples,
 		},
 		{
+			id: 4,
 			image: image3,
-			Name: "lorem20",
+			Name: "Senectus adipiscing nascetur accumsan ",
 			timeLeft: "02:30:00",
-			price: 80,
+			price: 1.63,
 			likes: 20,
+			BiddingPeople: BiddingPeoples,
 		},
 		{
-			image: "https://via.placeholder.com/400x300",
-			Name: "lorem20",
+			id: 5,
+			image: image4,
+			Name: "Mattis at diam lorem nisl nam sed sociis",
 			timeLeft: "02:30:00",
-			price: 80,
+			price: 5,
 			likes: 20,
+			BiddingPeople: BiddingPeoples,
 		},
 		{
-			image: "https://via.placeholder.com/400x300",
-			Name: "lorem20",
+			id: 6,
+			image: image5,
+			Name: "Lorem Ipsum",
 			timeLeft: "02:30:00",
-			price: 80,
+			price: 2.1,
 			likes: 20,
+			BiddingPeople: BiddingPeoples,
 		},
 	];
 
@@ -63,6 +80,7 @@ const LatestAuction = () => {
 			(prev) => Math.min(prev + 1, cardData.length - 3) // Prevent going beyond the last visible cards
 		);
 	};
+
 	return (
 		<div className='bg-[#060714ff]'>
 			<p className='text-center pt-10 pb-10 font-medium text-white text-2xl'>
@@ -77,11 +95,11 @@ const LatestAuction = () => {
 					}}
 				>
 					{cardData.map((data, index) => (
-						<div
-							key={index}
-							className='flex-shrink-0  px-2' // Card width: 1/3 of the container
-						>
-							<Card data={data} />
+						<div key={index} className='flex-shrink-0 px-2'>
+							{/* Wrap the Card in a Link */}
+							<Link to={`/auction/${data.id}`}>
+								<Card data={data} />
+							</Link>
 						</div>
 					))}
 				</div>
@@ -90,7 +108,7 @@ const LatestAuction = () => {
 				{currentIndex > 0 && (
 					<button
 						onClick={handlePrev}
-						className='absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-200 hover:bg-gray-300 text-gray-800 p-2 rounded-full shadow-md z-10'
+						className='absolute left-2 top-1/2 transform -translate-y-1/2 bg-[#1e2238ff] hover:bg-gray-300 text-gray-800 p-6 rounded-full shadow-md z-10'
 					>
 						◀
 					</button>
@@ -100,7 +118,7 @@ const LatestAuction = () => {
 				{currentIndex < cardData.length - 3 && (
 					<button
 						onClick={handleNext}
-						className='absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-200 hover:bg-gray-300 text-gray-800 p-2 rounded-full shadow-md z-10'
+						className='absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#1e2238ff] hover:bg-gray-300 text-gray-800 p-6 rounded-full shadow-md z-10'
 					>
 						▶
 					</button>
