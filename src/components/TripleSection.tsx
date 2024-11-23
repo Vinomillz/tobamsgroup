@@ -13,6 +13,7 @@ import BiddingPeoples from "../assets/BiddingPeople.png";
 const TripleSection = () => {
 	const cardData: CardData[] = [
 		{
+			id: 13,
 			image: hotsales,
 			Name: "Tristique diam a, enim, . Viverra etiam",
 			timeLeft: "12:30:00",
@@ -21,6 +22,7 @@ const TripleSection = () => {
 			BiddingPeople: BiddingPeoples,
 		},
 		{
+			id: 14,
 			image: ITEM1,
 			Name: "Vulputate felis purus viverra morbi ",
 			timeLeft: "08:15:00",
@@ -29,6 +31,7 @@ const TripleSection = () => {
 			BiddingPeople: BiddingPeoples,
 		},
 		{
+			id: 15,
 			image: image2,
 			Name: "Dui accumsan leo vestibulum ornare",
 			timeLeft: "04:45:00",
@@ -37,6 +40,7 @@ const TripleSection = () => {
 			BiddingPeople: BiddingPeoples,
 		},
 		{
+			id: 16,
 			image: image3,
 			Name: "Senectus adipiscing nascetur accumsan ",
 			timeLeft: "02:30:00",
@@ -45,6 +49,7 @@ const TripleSection = () => {
 			BiddingPeople: BiddingPeoples,
 		},
 		{
+			id: 17,
 			image: image4,
 			Name: "Mattis at diam lorem nisl nam sed sociis",
 			timeLeft: "02:30:00",
@@ -53,6 +58,7 @@ const TripleSection = () => {
 			BiddingPeople: BiddingPeoples,
 		},
 		{
+			id: 18,
 			image: image5,
 			Name: "lorem20",
 			timeLeft: "02:30:00",
