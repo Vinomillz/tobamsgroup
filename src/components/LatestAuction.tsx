@@ -14,7 +14,7 @@ const LatestAuction = () => {
 	// Add a unique "id" to each auction item
 	const cardData: CardData[] = [
 		{
-			id: 1,
+			id: 7,
 			image: image0,
 			Name: "Tristique diam a, enim, . Viverra etiam",
 			timeLeft: "12:30:00",
@@ -23,7 +23,7 @@ const LatestAuction = () => {
 			BiddingPeople: BiddingPeoples,
 		},
 		{
-			id: 2,
+			id: 8,
 			image: ITEM1,
 			Name: "Vulputate felis purus viverra morbi ",
 			timeLeft: "08:15:00",
@@ -32,7 +32,7 @@ const LatestAuction = () => {
 			BiddingPeople: BiddingPeoples,
 		},
 		{
-			id: 3,
+			id: 9,
 			image: image2,
 			Name: "Dui accumsan leo vestibulum ornare",
 			timeLeft: "04:45:00",
@@ -41,7 +41,7 @@ const LatestAuction = () => {
 			BiddingPeople: BiddingPeoples,
 		},
 		{
-			id: 4,
+			id: 10,
 			image: image3,
 			Name: "Senectus adipiscing nascetur accumsan ",
 			timeLeft: "02:30:00",
@@ -50,7 +50,7 @@ const LatestAuction = () => {
 			BiddingPeople: BiddingPeoples,
 		},
 		{
-			id: 5,
+			id: 11,
 			image: image4,
 			Name: "Mattis at diam lorem nisl nam sed sociis",
 			timeLeft: "02:30:00",
@@ -59,7 +59,7 @@ const LatestAuction = () => {
 			BiddingPeople: BiddingPeoples,
 		},
 		{
-			id: 6,
+			id: 12,
 			image: image5,
 			Name: "Lorem Ipsum",
 			timeLeft: "02:30:00",
